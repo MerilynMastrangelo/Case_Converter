@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Case Converter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <main>
-        <form action="./includes/textEditing.inc.php" method="post">
-            <textarea name="string" placeholder="Write some text"></textarea>
-            <input type="submit" name="reverseString-submit" value="Reverse gnirtS">
-            <input type="submit" name="uppercase-submit" value="UPPER CASE">
-            <input type="submit" name="lowercase-submit" Value="lower case">
-            <input type="submit" name="captalizecase-submit" value="Captalized case">
-        </form>
-        
-    </main>
+    <input type="text" id="string" placeholder="Write some text">
+    <br>
+    <button type="submit" id="revString">Reverse String</button>
+    <br>
+    <button type="submit" id="uppercaseBtn">UPPER CASE</button>
+    <br>
+    <button type="submit" id="lowercaseBtn">lower case</button>
+    <br>
+    <button type="submit" id="CapitalizeBtn">Capitalize Case</button>
+    <br>
+    <button type="submit" id="altcaselowBtn">aLtErNaTiNg cAsE</button>
+    <br>
+    <button type="submit" id="altcaseupperBtn">AlTeRnAtInG CaSe</button>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -65,4 +65,45 @@
                 $("#string").val(data);
             });
         });
+        $("#copyCbd").click(function(){
+            $("#string").select();
+            document.execCommand('copy');
+        });
+        $("#string").keyup(function(){
+            var string = $('#string').val();
+            var count = $('#countString').val();
+            $.post("caseChange.php", {
+                string: string,
+                count: count
+            },
+            function(data){
+                $("#countString").html(data);
+            });
+        });
+        $("#string").keyup(function(){
+            var string = $('#string').val();
+            var countWrd = $('#wordCount').val();
+            $.post("caseChange.php", {
+                string: string,
+                countWrd: countWrd
+            },
+            function(data){
+                $("#wordCount").html(data);
+            });
+        });
+        $("#string").keyup(function(){
+            var string = $('#string').val();
+            var countLine = $('#lineCount').val();
+            $.post("caseChange.php", {
+                string: string,
+                countLine: countLine
+            },
+            function(data){
+                $("#lineCount").html(data);
+            });
+        });
+        $("#clear").click(function(){
+           
+            $("#string").val("");
+        });
     });
